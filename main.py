@@ -47,10 +47,17 @@ class Auto():
         c = 0
         for asiento in self.asientos:
             if isinstance(asiento, Asiento):
-                if asiento.registro != self.motor.registro or asiento.registro != self.registro:
+                if asiento.registro != self.motor.registro:
+                    print("Las piezas no son orinales")
+                    c = 1
+                    break
+                elif asiento.registro != self.registro:
+                    print("Las piezas no son orinales")
+                    c = 1
+                    break
+                elif self.registro != self.motor.registro:
                     print("Las piezas no son orinales")
                     c = 1
                     break
         if c == 0:
             print("Auto original")
-            
