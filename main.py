@@ -44,12 +44,12 @@ class Auto():
         return contador
     
     def verificarIntegridad(self) -> str:
+        c = 0
         for asiento in self.asientos:
-            asiento.registro = self.registro
-        self.motor.registro = self.registro
-
-        registros_asientos = [asiento.registro for asiento in self.asientos]
-        if self.registro in registros_asientos and self.registro == self.motor.registro:
-            return "Auto original"
-        else:
-            return "Las piezas no son originales"
+            if isinstance(asiento, Asiento):
+                if asiento.registro != self.motor.registro or asiento.registro != self.registro:
+                    print("Las piezas no son orinales")
+                    c = 1
+                    break
+            if c == 0:
+                print("Auto original")
