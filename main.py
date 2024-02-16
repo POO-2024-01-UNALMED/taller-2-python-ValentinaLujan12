@@ -49,8 +49,8 @@ class Auto():
                 if asiento.registro != self.motor.registro:
                     return"Las piezas no son originales"
                 elif asiento.registro != self.registro:
-                    print("Las piezas no son originales")
+                    return"Las piezas no son originales"
                 elif self.registro != self.motor.registro:
-                    print("Las piezas no son originales")
+                    return"Las piezas no son originales"
                 else:
                     return "Auto original"
