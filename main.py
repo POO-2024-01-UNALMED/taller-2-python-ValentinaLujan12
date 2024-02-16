@@ -51,5 +51,6 @@ class Auto():
                     print("Las piezas no son orinales")
                     c = 1
                     break
-            if c == 0:
-                print("Auto original")
+        if c == 0:
+            print("Auto original")
+            
